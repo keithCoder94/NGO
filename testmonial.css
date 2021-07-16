@@ -1,0 +1,114 @@
+.hdr{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    height: 110px;
+}
+.hdr h1{
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+}
+.hdr p {
+    font-size: 20px;
+    text-align: center;
+}
+.testimonial-container{
+    width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 20px;
+    box-sizing: border-box;
+    padding: 20px;
+}
+.imgBox img{
+    width: 150px;
+    height: 150px;
+}
+.testimonial-container .box{
+    position: relative;
+    padding: 80px 40px 40px;
+    transition: 0.5s;
+    text-align: center;
+    background: #fab0e7;;
+}
+.testimonial-container .box:hover{
+    background: #9ed8fb;;
+}
+.testimonial-container .box p{
+    margin: 0;
+    padding: 0;
+    transition: 0.5s;
+}
+.testimonial-container .box h4{
+    margin: 20px 0 0;
+    padding: 0;
+    transition: 0.5s;
+    font-size: 18px;
+    color: #FF0057;
+    font-weight: 700;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+.testimonial-container .box h4 span{
+    font-weight: 600;
+    font-size: 14px;
+    color: #fff;
+    transition: 0.5s;
+}
+.imgBox{
+    padding-right: 15px;
+}
+.testimonial-container .imgBox{
+    position:absolute;
+    top: -70px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+   overflow: hidden;
+}
+.testimonial-container .box:before{
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+    background: url(quotes.png);
+    background-size: cover;
+    opacity: 0.7;
+    pointer-events: none;
+    transform: translateY(-40px);
+}
+.testimonial-container .box:after{
+    content: '';
+    position: absolute;
+    bottom: 20px;
+    left: 40px;
+    width: 40px;
+    height: 40px;
+    background: url(quotes.png);
+    background-size: cover;
+    opacity: 0.7;
+    pointer-events: none;
+    transform: rotate(180deg) translateY(-38px);
+}
+@media (max-width:800px){
+    .testimonial-container{
+        display: block;
+        padding: 0px;
+        width: 500px;
+        overflow: hidden;
+        margin-right: 20px;
+    }
+    .testimonial-container .box{
+        margin-top: 70px;
+        margin-bottom: 20px;
+    }
+    .hdr{
+        position: relative;
+        margin-left: 80px;
+    }
+}
